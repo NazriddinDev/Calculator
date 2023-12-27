@@ -17,6 +17,9 @@ namespace Calculator
 
             Console.WriteLine("Here are your results: "); 
             Console.WriteLine($"{firstNumber}+{secondNumber}={firstNumber+secondNumber}");
+            Console.WriteLine($"{firstNumber}-{secondNumber}={firstNumber-secondNumber}");
+            Console.WriteLine($"{firstNumber}*{secondNumber}={firstNumber*secondNumber}");
+            Console.WriteLine($"{firstNumber}/{secondNumber}={firstNumber/secondNumber}");
         }
     }
 }
