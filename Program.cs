@@ -8,6 +8,8 @@ namespace Calculator
             Console.WriteLine("Enter values: ");
             Console.Write("First number: ");
             string firstUerValues = Console.ReadLine();
+            Console.Write("Create operation: [+,-,*,/, %] ");
+            string operation = Console.ReadLine();
             Console.Write("Second number: ");
             string secondUserValues=Console.ReadLine();
 
@@ -16,10 +18,29 @@ namespace Calculator
             decimal secondNumber = Convert.ToDecimal(secondUserValues);
 
             Console.WriteLine("Here are your results: "); 
-            Console.WriteLine($"{firstNumber}+{secondNumber}={firstNumber+secondNumber}");
-            Console.WriteLine($"{firstNumber}-{secondNumber}={firstNumber-secondNumber}");
-            Console.WriteLine($"{firstNumber}*{secondNumber}={firstNumber*secondNumber}");
-            Console.WriteLine($"{firstNumber}/{secondNumber}={firstNumber/secondNumber}");
+            switch(operation)
+            {
+                case "+":
+                Console.WriteLine($"{firstNumber}+{secondNumber}={firstNumber+secondNumber}");
+                break;
+                case "-":
+                Console.WriteLine($"{firstNumber}-{secondNumber}={firstNumber-secondNumber}");
+                break;
+                case "*":
+                Console.WriteLine($"{firstNumber}*{secondNumber}={firstNumber*secondNumber}");
+                break;
+                case "/":
+                Console.WriteLine($"{firstNumber}/{secondNumber}={firstNumber/secondNumber}");
+                break;
+                case "%":
+                Console.WriteLine($"{firstNumber}%{secondNumber}={firstNumber%secondNumber}");
+                break;
+                default :
+                Console.WriteLine("Not found your operation");
+                break;
+            }
+            
+            
         }
     }
 }
